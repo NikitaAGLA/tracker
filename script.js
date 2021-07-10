@@ -4,9 +4,10 @@ form.onsubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
     if (data.get('inputTxt')) {
+        let ulForAdd = document.getElementById('ulList');
         let newText = document.createElement('li');
         newText.innerText = data.get('inputTxt');
-        console.log(data.get('inputTxt'));
+        ulForAdd.prepend(newText);
     }
 }
 
