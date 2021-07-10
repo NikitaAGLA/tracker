@@ -1,0 +1,13 @@
+1. Убрать пробелы в атрибутах id/class
+3. Везде ли нужны id? 
+4. Кнопку с плюсиком сверстать (картинку убрать)
+5. id = 'ulList' - плохое имя для id
+6. body {
+    display: flex;
+    justify-content: center;
+} - это очень плохо
+7. #name {
+    display: flex;
+    justify-content: center;
+} - сделать проще
+9. input доделать 
