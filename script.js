@@ -32,7 +32,7 @@ function onRemoveElemList (event) {
 const imgForSort = document.querySelector('div#imgForSort img');
 
 //ищем картинку. По идентификатору не находит
-const imgDelText = document.querySelector('.x#imgForDelInputText');
+const imgDelText = document.querySelector('.iconForDeleteText#imgForDelInputText');
 console.dir(imgDelText);
 const form = document.querySelector('form');
 const input = document.querySelector('#inputTable>input[name="inputTxt"]');
@@ -61,7 +61,7 @@ form.onsubmit = (event) => {
         // добавляем текст в поле
         textField.innerText = data.get('inputTxt');
         // imageClose.setAttribute('src', 'image/Group 77.png');
-        imageClose.className = 'x';
+        imageClose.className = 'iconForDeleteText';
 
         //добавляем событие удаление элемента списка
         //@function onRemoveElemList
@@ -123,10 +123,10 @@ function createNewList(elemSort) {
    
     elemSort.forEach((item) => {
         ulForAdd.innerHTML += `
-        <li><span>${item.objSpan}</span><div class="x" id='imgForDelInputText'></div></li>
+        <li><span>${item.objSpan}</span><div class="iconForDeleteText" id='imgForDelInputText'></div></li>
         `;
     })
-    document.querySelectorAll('.x').forEach((item) => {
+    document.querySelectorAll('.iconForDeleteText').forEach((item) => {
         item.onclick = (event) => onRemoveElemList (event);
     });
     

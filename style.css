@@ -6,7 +6,9 @@ html,body {
     width: 100%;
     height: 100%;
 }
-body {
+.container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +130,7 @@ img#imgForDelInputText:hover,
     background: url('../tracker/image/Group 70 col.png') no-repeat !important;
 } 
 
-.x {
+.iconForDeleteText {
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -137,7 +139,7 @@ img#imgForDelInputText:hover,
 
 }
 
-.x:after {
+.iconForDeleteText:after {
     content: '+';
     position: absolute;
     top: 7px;
@@ -151,10 +153,10 @@ img#imgForDelInputText:hover,
     color: #C4C4C4;
 }
 
-.x:hover {
+.iconForDeleteText:hover {
     background-color: #833AE0;
     
 }
-.x:hover:after {
+.iconForDeleteText:hover:after {
     color: white;
 }
