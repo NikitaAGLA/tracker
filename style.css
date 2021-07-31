@@ -9,13 +9,15 @@ html,body {
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #general {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    height: auto;
     width: 336px;
     border-color: #C4C4C4;
     border-width: 1px;
@@ -52,9 +54,9 @@ h1 {
 }
 
 #textBlock {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 12px 27px 12px 27px;
-    width: 286px;
+    /* width: 286px; */
     border-color: #C4C4C4;
     border-width: 1px;
     border-style: solid;
@@ -62,6 +64,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     margin-left: 28px;
     margin-top: 11px;
+    margin-right: 22px;
     display: flex;
     flex-direction: column;
 }

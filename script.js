@@ -56,12 +56,12 @@ form.onsubmit = (event) => {
         // создаем новый элемент списка
         let newElementLi = document.createElement('li');
         let textField = document.createElement('span');
-        let imageClose = document.createElement('img');
+        let imageClose = document.createElement('div');
         
         // добавляем текст в поле
         textField.innerText = data.get('inputTxt');
-        imageClose.setAttribute('src', 'image/Group 77.png');
-        imageClose.className = 'deleteElementList';
+        // imageClose.setAttribute('src', 'image/Group 77.png');
+        imageClose.className = 'x';
 
         //добавляем событие удаление элемента списка
         //@function onRemoveElemList
@@ -119,14 +119,14 @@ function sortElementList () {
 function createNewList(elemSort) {
     let ulForAdd = getElemList();
     
-    clearElem (ulForAdd);
+    clearElem(ulForAdd);
    
     elemSort.forEach((item) => {
         ulForAdd.innerHTML += `
-        <li><span>${item.objSpan}</span><img src="image/Group 77.png" class='deleteElementList'></li>
+        <li><span>${item.objSpan}</span><div class="x" id='imgForDelInputText'></div></li>
         `;
     })
-    document.querySelectorAll('.deleteElementList').forEach((item) => {
+    document.querySelectorAll('.x').forEach((item) => {
         item.onclick = (event) => onRemoveElemList (event);
     });
     
